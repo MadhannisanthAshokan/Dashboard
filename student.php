@@ -161,9 +161,7 @@ $(document).ready(function(){
             }
             }elseif($schoolid){
                 //
-                //SELECT * FROM ((Student INNER JOIN Class ON student.classid=Class.classid)INNER JOIN School ON School.schoolid=Class.schoolid) where School.schoolid='.$schoolid;
-                //$select= 'SELECT student.studentid,student.studentname,student.age,student.fathername,student.mobilenumber,student.classid,student.cityid from((Class inner join school on school.schoolid = class.classid)INNER JOIN Student on student.classid=class.classid) WHERE School.schoolid='.$schoolid;
-                $select="SELECT * FROM ((Student INNER JOIN Class ON student.classid=Class.classid)INNER JOIN School ON School.schoolid=Class.schoolid) where School.schoolid=".$schoolid;
+                /
                 $result2=$conn->query($select);
                 echo $select;
             while ($row = $result2->fetch_assoc()) {
